@@ -16,6 +16,7 @@ dotenv.config()
 
 // A server connection
 io.on('connection', socket => {
+    console.log(`A new socket is connected with the id ${socket.id}`);
     socket.emit("myId", socket.id);
 
     // listening to disconnect event
